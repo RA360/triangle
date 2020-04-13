@@ -1,0 +1,129 @@
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -33px;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.3333% - 66px);
+    margin: 0 33px 66px;
+    &-title {
+      flex-grow: 1;
+      margin-top: 39px;
+    }
+  }
+  &__head {
+    position: relative;
+    max-height: 240px;
+    overflow: hidden;
+    &::before,
+    &::after {
+      opacity: 0;
+      position: absolute;
+      transition: all 0.2s linear;
+    }
+    &::before {
+      content: "";
+      background: #121212;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "Read More";
+      font-size: 22px;
+      letter-spacing: 0.032em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      &::before {
+        opacity: 0.9;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &-title {
+    font: 42px/1.388 "PlayfairDisplay-Regular", sans-serif;
+    word-break: break-word;
+  }
+
+  &-txt {
+    flex-grow: 0;
+    margin-top: 33px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .news {
+    margin: 0 -25px;
+    &__card {
+      width: calc(33.3333% - 50px);
+      margin: 0 25px 50px;
+      &-title {
+        margin-top: 31px;
+      }
+    }
+    &__head {
+      &::after {
+        font-size: 19px;
+      }
+    }
+    &-title {
+      font-size: 34px;
+    }
+    &-txt {
+      font-size: 15px;
+      margin-top: 27px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .news {
+    justify-content: space-between;
+    margin: 0;
+    &__card {
+      width: calc(50% - 25px);
+      margin: 0 0 50px;
+    }
+    &-title {
+      font-size: 30px;
+      margin-top: 31px;
+    }
+    &-txt {
+      font-size: 13px;
+      margin-top: 21px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .news {
+    &__card {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .news {
+    &__head {
+      &::after {
+        font-size: 16px;
+      }
+    }
+    &-title {
+      font-size: 25px;
+      margin-top: 22px;
+    }
+    &-txt {
+      font-size: 9px;
+      margin-top: 17px;
+    }
+  }
+}

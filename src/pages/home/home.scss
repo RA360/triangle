@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "PlayfairDisplay-Italic";
+  src: url("../../assets/fonts/PlayfairDisplay/PlayfairDisplay-Italic.eot");
+  src: url("../../assets/fonts/PlayfairDisplay/PlayfairDisplay-Italic.woff")
+      format("woff"),
+    url("../../assets/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf")
+      format("truetype"),
+    url("../../assets/fonts/PlayfairDisplay/PlayfairDisplay-Italic.svg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home {
+  background: url("../../assets/img/homeBg.png") no-repeat center / cover;
+  height: 100vh;
+  padding-top: 119px;
+  &__row {
+    margin-left: 16%;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+}
+
+.italic {
+  font-family: "PlayfairDisplay-Italic", sans-serif;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    &__row {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .home {
+    padding-top: 20%;
+    &__title {
+      font-size: 11vw;
+      margin-bottom: 9%;
+    }
+  }
+  .slogan {
+    font-size: 2.79vw;
+  }
+}

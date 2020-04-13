@@ -1,0 +1,41 @@
+.post {
+  min-height: 320px;
+  margin-bottom: 70px;
+  &__img {
+    width: 520px;
+    max-height: 320px;
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+  }
+  &__desc {
+    line-height: 1.96;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .post {
+    margin-bottom: 63px;
+    &__img {
+      width: 490px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .post {
+    margin-bottom: 56px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .post {
+    flex-direction: column;
+    &__img {
+      width: 100%;
+      height: 225px;
+      float: none;
+      margin-right: 0;
+    }
+  }
+}
